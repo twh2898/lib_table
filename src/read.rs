@@ -1,6 +1,6 @@
 ///! Functions for generateing a table from different sources.
 
-use table::Table;
+use Table;
 use std::path::Path;
 
 impl Table {

@@ -1,6 +1,6 @@
 ///! Functions for accessing data within the table.
 
-use table::Table;
+use Table;
 use std::path::Path;
 
 impl Table {
