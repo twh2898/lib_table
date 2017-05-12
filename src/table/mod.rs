@@ -15,7 +15,7 @@ impl Table {
     ///
     /// # Example
     /// ```rust
-    /// use lib_table::table::Table;
+    /// use table::table::Table;
     /// let tbl = Table::new();
     ///
     /// assert_eq!(0, tbl.rows());
