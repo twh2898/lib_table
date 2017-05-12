@@ -1,6 +1,8 @@
 
 pub mod read;
+pub mod access;
 
+#[derive(Debug, Clone)]
 pub struct Table {
     rows: usize,
     cols: usize,
@@ -17,14 +19,6 @@ impl Table {
             data: Vec::new(),
         }
     }
-
-    pub fn rows(&self) -> usize {
-        self.rows
-    }
-
-    pub fn cols(&self) -> usize {
-        self.cols
-    }
 }
 
 #[cfg(test)]
@@ -36,5 +30,13 @@ mod tests {
         let tbl = Table::new();
         assert_eq!(0, tbl.rows());
         assert_eq!(0, tbl.cols());
+    }
+
+    #[test]
+    fn test_clone() {
+        let a = Table::new();
+        let b = a.clone();
+
+        println!("{:?} {:?}", a, b);
     }
 }
