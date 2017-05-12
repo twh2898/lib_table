@@ -12,6 +12,15 @@ pub struct Table {
 
 impl Table {
     /// Create a new Table with no data, no headers, 0 rows, and 0 columns.
+    ///
+    /// # Example
+    /// ```rust
+    /// use lib_table::table::Table;
+    /// let tbl = Table::new();
+    ///
+    /// assert_eq!(0, tbl.rows());
+    /// assert_eq!(0, tbl.cols());
+    /// ```
     pub fn new() -> Table {
         Table {
             rows: 0,
