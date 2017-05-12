@@ -11,6 +11,7 @@ pub struct Table {
 }
 
 impl Table {
+    /// Create a new Table with no data, no headers, 0 rows, and 0 columns.
     pub fn new() -> Table {
         Table {
             rows: 0,
@@ -28,15 +29,11 @@ mod tests {
     #[test]
     fn test_new() {
         let tbl = Table::new();
+
+        assert!(tbl.data.is_empty());
+        assert!(tbl.headers.is_empty());
+
         assert_eq!(0, tbl.rows());
         assert_eq!(0, tbl.cols());
-    }
-
-    #[test]
-    fn test_clone() {
-        let a = Table::new();
-        let b = a.clone();
-
-        println!("{:?} {:?}", a, b);
     }
 }
